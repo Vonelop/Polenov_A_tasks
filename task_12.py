@@ -1,15 +1,18 @@
 from task_11 import Dessert
 
 class JellyBean(Dessert):
-    def __int__(self, name, calories, flavor=None):
+    def __int__(self, name=None, calories=None, flavor=None):
         super().__init__(name, calories)
-        self.flavor = flavor
+        self._flavor = flavor
 
     @property
     def flavor(self):
-        return self.flavor
+        return self._flavor
 
     @flavor.setter
-    def flavor(self, new_flavor):
-        self.flavor = new_flavor
-        
+    def flavor(self, flavor):
+        self._flavor = flavor
+
+    def is_delicious(self):
+        if self.flavor == 'black licorice':
+            return False
