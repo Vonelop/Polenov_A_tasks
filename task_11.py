@@ -24,5 +24,4 @@ class Dessert:
             return True
 
     def is_delicious(self):
-        if self.name != None:
-            return True
+        return True
