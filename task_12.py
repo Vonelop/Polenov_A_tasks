@@ -16,3 +16,4 @@ class JellyBean(Dessert):
     def is_delicious(self):
         if type(self.flavor) == str and self._flavor == 'black licorice':
             return False
+        return True
